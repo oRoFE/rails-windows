@@ -18,7 +18,11 @@ Windows 向けパッケージ管理ツール
 
 インストーラーから書くバージョンの Ruby をインストールすることができる。下記の uru と合わせて使うと良い。
 
-また、gem のライブラリにはインストール時に Development Kit を要求するものがあるため、合わせてインストールすると良い。適当な場所に展開し、パスを通しておく。
+また、gem のライブラリにはインストール時に Development Kit を要求するものがあるため、合わせてインストールすると良い。インストール方法: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+
+1. ダウンロードした .exe ファイルをダブルクリックで適当なフォルダに展開する。
+1. コマンドプロンプトで展開したフォルダに移動し、`$ ruby dk.rb init` を実行する。
+1. 続けて `$ ruby dk.rb install` を実行する。
 
 ### [uru](https://bitbucket.org/jonforums/uru)
 
