@@ -16,7 +16,7 @@ Windows 向けパッケージ管理ツール
 
 ### [RubyInstaller](http://rubyinstaller.org/)
 
-インストーラーから書くバージョンの Ruby をインストールすることができる。下記の uru と合わせて使うと良い。
+インストーラーから各バージョンの Ruby をインストールすることができる。下記の uru と合わせて使うと良い。
 
 また、gem のライブラリにはインストール時に Development Kit を要求するものがあるため、合わせてインストールすると良い。インストール方法: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 
