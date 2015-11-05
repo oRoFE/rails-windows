@@ -38,3 +38,13 @@ $ uru 223 # 登録した Ruby を使用する
 $ ruby -v
 ruby 2.2.3p173 (2015-08-18 revision 51636) [x64-mingw32]
 ```
+
+### [VirtualBox](https://www.virtualbox.org/)
+
+仮想マシンをたてるためのソフトウェア。適当な Linux ディストリビューションを入れて環境構築をしておくと後々便利かも。
+
+Vagrant とともに使うことが多い。
+
+### [Vagrant](https://www.vagrantup.com/)
+
+仮想環境構築を簡単にするためのソフトウェア。システムチームが Vagrantfile を用意している場合は、`$ vagrant up` するだけで諸々の開発に必要な設定を行われ、仮想マシンが立ち上がる。……が、Windows だと大抵エラーが出るので、その対応が必要。

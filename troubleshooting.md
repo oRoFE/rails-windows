@@ -8,3 +8,8 @@
 - berks コマンドで `certificate verify failed` エラーが出る。
   - 証明書をダウンロードし、環境変数を設定する。
   - 参照: http://qiita.com/bibio/items/8c766be648fdd4f4e2fb
+- vagrant がフォルダのマウントに失敗する。`Failed to mount folders in Linux guest. ...`
+  - [vbox をリビルドする](http://qiita.com/osamu1203/items/10e19c74c912d303ca0b)
+  - 上記でもダメなら、`$ vagrant plugin install vagrant-vbguest` する。
+- vagrant まわりがなんかおかしい。
+  - `$ vagrant destroy` すれば直る時もある。
