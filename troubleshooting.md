@@ -13,7 +13,15 @@
 - vagrant がフォルダのマウントに失敗する。`Failed to mount folders in Linux guest. ...`
   - [vbox をリビルドする](http://qiita.com/osamu1203/items/10e19c74c912d303ca0b)
   - 上記でもダメなら、`$ vagrant plugin install vagrant-vbguest` する。
+- vagrant、共有フォルダ内のファイルの権限を chmod で変更できない。
+  - Vagrantfile の `config.vm.synced_folder` でアクセス権限を設定する。
+  - 例: `config.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: [ 'dmode=777', 'fmode=766' ]`
 - vagrant まわりがなんかおかしい。
   - `$ vagrant destroy` すれば直る時もある。
 - 仮想マシン内で `bundle install` に失敗する。
   - インストール先を共有フォルダ (Vagrant なら `/vagrant`) 外にすることで解決する場合がある。
+- `docker up` するときに、`Container command not found or does not exist` というエラーが出る
+  - entry point のスクリプトの改行コードが CRLF に変換されて、VM で認識できなくなっている可能性がある。
+  - CRLF -> LF に変換する
+  - Git の設定で、checkout 時に LF -> CRLF に変換するオプションが有効になっている場合があるので、無効にする
+    - `git config --global core.autocrlf false`
